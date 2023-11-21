@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "637389050759",
+    "project_id": "walltutorial-fcf1e",
+    "storage_bucket": "walltutorial-fcf1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637389050759:android:c3493b7c0e423e13497922",
+        "android_client_info": {
+          "package_name": "com.example.flutter_social_media"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk905llI1ywKnvHzolqRS9KhQ3I6Yn8cw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
