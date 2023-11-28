@@ -64,6 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
       if (context.mounted) Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       //pop loading circle
+      // ignore: use_build_context_synchronously
       Navigator.pop(context);
       //show error the user
       displayMessage(e.code);
@@ -91,11 +92,11 @@ class _RegisterPageState extends State<RegisterPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 //logo
-                Icon(
+                const Icon(
                   Icons.lock,
                   size: 100,
                 ),
-                SizedBox(height: 50),
+                const SizedBox(height: 50),
 
                 //welcome back message
                 Text(
@@ -104,7 +105,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     color: Colors.grey[700],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
 
                 //email textField
                 MyTextField(

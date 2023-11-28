@@ -83,10 +83,10 @@ class _WallPostState extends State<WallPost> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text("Add Comment"),
+        title: const Text("Add Comment"),
         content: TextField(
           controller: _commentTextController,
-          decoration: InputDecoration(hintText: "Write a comment.."),
+          decoration: const InputDecoration(hintText: "Write a comment.."),
         ),
         actions: [
           //cancel button
@@ -98,7 +98,7 @@ class _WallPostState extends State<WallPost> {
               //clear controller
               _commentTextController.clear();
             },
-            child: Text("Cancel"),
+            child: const Text("Cancel"),
           ),
           //post button
           TextButton(
@@ -112,7 +112,7 @@ class _WallPostState extends State<WallPost> {
               //clear controller
               _commentTextController.clear();
             },
-            child: Text("Post"),
+            child: const Text("Post"),
           ),
         ],
       ),
@@ -158,11 +158,14 @@ class _WallPostState extends State<WallPost> {
                   .collection("User Posts")
                   .doc(widget.postId)
                   .delete()
+                  // ignore: avoid_print
                   .then((value) => print("post deleted"))
                   .catchError(
+                      // ignore: avoid_print
                       (error) => print("failed to delete post: $error"));
 
               //dismiss the dialog box
+              // ignore: use_build_context_synchronously
               Navigator.pop(context);
             },
             child: const Text("Delete"),
@@ -241,7 +244,7 @@ class _WallPostState extends State<WallPost> {
                   //like count
                   Text(
                     widget.likes.length.toString(),
-                    style: TextStyle(color: Colors.grey),
+                    style: const TextStyle(color: Colors.grey),
                   ),
                 ],
               ),
